@@ -48,12 +48,13 @@ while run == True:
                 time.sleep(15)
             # When the cell is blank, go forward. 
             else:
-                # By getting all values while B1 is blank, we won't have to reset it because we're going to push it later. 
-                data = sheet.get_all_values()
+                # Make it processing before getting going
                 sheet.update("B1","Processing")
                 wait = False
         # For each file in the dir path...
         for f in os.listdir():
+            sheet=client.open(ssName).worksheet(wsName)
+            data = sheet.get_all_values()
             with open(f,"r") as x:
                 text = x.read()
                 batch = int(batchSearch.search(text).group(1).strip())

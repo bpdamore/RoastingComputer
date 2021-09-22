@@ -11,6 +11,7 @@ This file must have the following variables
 - dir : The directory that roast files will be saved to (ex: C:/Users/Roaster/Desktop/RoastLogs)
 - dest : The directory that the processed files will be moved to (ex: C:/Users/Roaster/Desktop/FormattedRoastLogs)
 - repoDir : The Directory of the repository (ex: C:/Users/Roaster/Documents/RoastingComputer)
+- machine : This is the color of the roaster (ex: "White" or "Red")
 
 ### 2 - creds.json File
 This file is generated when a new Google Sheets API account is created with Google. In this file is an email address that needs to have access to the google sheet you will be working on. 

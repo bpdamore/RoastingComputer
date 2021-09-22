@@ -34,6 +34,7 @@ def RoastMatch(data,cname,batch,match,roaster,blendname,sheet):
     batch == batch weight 
     """
     from fuzzywuzzy import fuzz
+    from config import machine
     row = 0
     for x in data:
         if match != 4:
@@ -61,7 +62,7 @@ def RoastMatch(data,cname,batch,match,roaster,blendname,sheet):
                         totRoast = int(totRoast)
 
                     # Keep a record
-                    logmsg = f"Changing {x[0]}'s roasted lbs from {totRoast} to {totRoast+batch}"
+                    logmsg = f"{machine} - Changing {x[0]}'s roasted lbs from {totRoast} to {totRoast+batch}"
                     event = dearDiary(logmsg, roaster)
                     DiaryUpdate(event)
                     # print(event)
