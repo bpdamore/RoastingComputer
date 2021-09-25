@@ -129,7 +129,7 @@ while run == True:
             os.chdir(dir)
             print("\nMoving file to Formatted Roast Logs folder")
             shutil.move(dir+"/"+new_name,dest)
-            sheet.update("B1","")
-            print("\nDone!")
+        sheet.update("B1","")
+        print("\nDone!")
 
     time.sleep(30)
