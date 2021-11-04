@@ -60,10 +60,11 @@ while run == True:
                 batch = int(batchSearch.search(text).group(1).strip())
                 cname = coffeeSearch.search(text).group(1).strip()
                 roaster = roasterSearch.search(text).group(1).strip()
-                try:
-                    blendname = blendSearch.search(text).group(1).strip()
-                except:
-                    blendname = "SO"
+                blendname = "SO"
+                # try:
+                #     blendname = blendSearch.search(text).group(1).strip()
+                # except:
+                #     blendname = "SO"
                 print("\n\nFound the following from the file: ")
                 print(f"Batch size : {batch}")
                 print(f"Coffee name : {cname}")
