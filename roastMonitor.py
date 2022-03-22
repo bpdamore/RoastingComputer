@@ -21,7 +21,7 @@ sheet=client.open(ssName).worksheet(wsName)
 
 # Create the search for the weight, title, and blend component
 # batchSearch = re.compile(r"'weightin': (\d+)")
-batchSearch = re.compile(r"'weight': [(\d+).")
+batchSearch = re.compile(r"'weight': \[(\d+).")
 coffeeSearch = re.compile(r"'title': '([a-zA-Z ]+)(\d+)?',")
 blendSearch = re.compile(r"'beans': '([a-zA-Z ]+)',")
 roasterSearch = re.compile(r"'operator': '([a-zA-Z]+)'")
