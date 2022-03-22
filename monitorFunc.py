@@ -48,6 +48,10 @@ def RoastMatch(data,cname,batch,match,roaster,blendname,sheet):
                 row+=1
                 pass
 
+            elif x[0].lower() == '' or x[0].lower() == ' ':
+                row+=1
+                pass
+            
             else: 
                 perc = fuzz.partial_ratio(cname.lower(),x[0].lower())
                 if perc >= 80:
